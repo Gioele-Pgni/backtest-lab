@@ -1,25 +1,93 @@
-# Backtest Report: Mean Reversion on EUR/USD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtest Lab - EasyLanguage</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f6f8fa;
+            color: #24292f;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #d0d7de;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            color: #0969da;
+        }
+        p { margin-bottom: 15px; }
+        .report {
+            background: white;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .report:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .report a {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0969da;
+            text-decoration: none;
+        }
+        .report a:hover { text-decoration: underline; }
+        .report .date {
+            color: #57606a;
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #d0d7de;
+            margin: 30px 0;
+        }
+        .footer {
+            color: #57606a;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
 
-**Test Date:** July 8, 2026  
-**Instrument:** EUR/USD (Forex)  
-**Timeframe:** 15 Minutes  
-**Platform:** TradeStation / MultiCharts
+    <h1>Backtest Archive - EasyLanguage</h1>
+    <p>Welcome. This landing page documents the backtests of trading strategies developed in EasyLanguage for TradeStation and MultiCharts.</p>
 
-## Strategy Parameters
-- Bollinger Bands (period 20, deviation 2)
-- RSI (period 14) < 30 for long, > 70 for short
-- Stop Loss: 50 pips
-- Take Profit: 100 pips
+    <h2>Archive by Date</h2>
 
-## Results
+    <div class="report">
+        <a href="#">Test EUR/USD - Mean Reversion</a>
+        <div class="date">July 8, 2026</div>
+    </div>
 
-| Metric | Value |
-|--------|-------|
-| Net Profit | +$3,250 |
-| Sharpe Ratio | 1.8 |
-| Max Drawdown | -12.0% |
-| Win Rate | 62% |
-| Total Trades | 45 |
+    <div class="report">
+        <a href="#">Test S&P 500 - Trend Following</a>
+        <div class="date">July 1, 2026</div>
+    </div>
 
-## Conclusions
-The strategy performed well in sideways markets. A trend filter should be considered.
+    <hr>
+
+    <h2>Next Steps</h2>
+    <p><em>Next test scheduled: Gold Futures (Breakout)</em></p>
+
+    <div class="footer">
+        Repository: <a href="https://github.com/Gioele-Pgni/backtest-lab">Gioele-Pgni/backtest-lab</a>
+    </div>
+
+</body>
+</html>
