@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backtest Lab</title>
+    <title>Backtest Lab - EasyLanguage</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -27,6 +27,11 @@
             color: #0969da;
         }
         p { margin-bottom: 15px; }
+        a {
+            color: #0969da;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
         hr {
             border: none;
             border-top: 2px solid #d0d7de;
@@ -38,15 +43,34 @@
             text-align: center;
             margin-top: 30px;
         }
+        .archive-link {
+            display: inline-block;
+            background: #0969da;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .archive-link:hover {
+            background: #0550a2;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Backtest Archive - EasyLanguage</h1>
-    <p>Welcome. This is the landing page for backtesting documentation.</p>
+    <h1>EasyLanguage Strategy Collection</h1>
 
-    <h2>Archive by Date</h2>
-    <p>No reports available yet.</p>
+    <p>
+        A repository of trading strategies written in EasyLanguage for TradeStation and MultiCharts.
+        It includes implementations of Trend Following, Mean Reversion, Breakout, and statistical models,
+        designed to provide a solid foundation for the development and backtesting of quantitative algorithms.
+    </p>
+
+    <h2>Archive</h2>
+    <p>Browse the full archive of backtest reports:</p>
+    <a href="/backtest-lab/archive/" class="archive-link">View Archive</a>
 
     <hr>
 
