@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 1 - Backtest Lab</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f6f8fa;
+            color: #24292f;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #d0d7de;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #0969da;
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            border-top: 2px solid #d0d7de;
+            margin: 30px 0;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Test 1: EUR/USD - Mean Reversion</h1>
+
+    <p><strong>Date:</strong> July 8, 2026</p>
+    <p><strong>Instrument:</strong> EUR/USD (Forex)</p>
+    <p><strong>Timeframe:</strong> 15 Minutes</p>
+    <p><strong>Platform:</strong> TradeStation / MultiCharts</p>
+
+    <hr>
+
+    <h2>Strategy Parameters</h2>
+    <ul>
+        <li>Bollinger Bands (period 20, deviation 2)</li>
+        <li>RSI (period 14) filter</li>
+        <li>Stop Loss: 50 pips</li>
+        <li>Take Profit: 100 pips</li>
+    </ul>
+
+    <h2>Results</h2>
+    <ul>
+        <li>Net Profit: +$3,250</li>
+        <li>Sharpe Ratio: 1.8</li>
+        <li>Max Drawdown: -12.0%</li>
+        <li>Win Rate: 62%</li>
+        <li>Total Trades: 45</li>
+    </ul>
+
+    <hr>
+
+    <a href="/backtest-lab/" class="back">&larr; Back to Home</a>
+
+</body>
+</html>
