@@ -75,14 +75,23 @@
 <body>
 
     <h1>EURUSD Trend Following</h1>
-        <p>
-            EUR/USD 
-            Market Significance: This currency pair constitutes the most actively traded instrument globally, accounting for approximately 25% of the total Forex market volume.
-            Liquidity Dynamics: Peak liquidity and volatility concentrations are systematically observed during the London–New York session overlap (13:00–17:00 GMT).
-            Volatility Metrics: Under standard market conditions, the Average Daily Range (ADR) historically fluctuates within a baseline bandwidth of 70 to 90 pips.
-            Macroeconomic Catalysts: The primary volatility drivers and systemic risk events encompass the Non-Farm Payrolls (NFP) releases, FOMC interest rate decisions, 
-            and ECB monetary policy announcements.
-        </p>
+        <div class="desc">
+            <p>
+                <strong>EUR/USD</strong>
+            </p>
+            <p>
+                <strong>Market Significance:</strong> This currency pair constitutes the most actively traded instrument globally, accounting for approximately 25% of the total Forex market volume.
+            </p>
+            <p>
+                <strong>Liquidity Dynamics:</strong> Peak liquidity and volatility concentrations are systematically observed during the London–New York session overlap (13:00–17:00 GMT).
+            </p>
+            <p>
+                <strong>Volatility Metrics:</strong> Under standard market conditions, the Average Daily Range (ADR) historically fluctuates within a baseline bandwidth of 70 to 90 pips.
+            </p>
+            <p>
+                <strong>Macroeconomic Catalysts:</strong> The primary volatility drivers and systemic risk events encompass the Non-Farm Payrolls (NFP) releases, FOMC interest rate decisions, and ECB monetary policy announcements.
+            </p>
+        </div>
 
     
 
@@ -106,13 +115,18 @@
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM-eurusd2.png" alt="equity line eurusd">
         <div class="desc">
-            
-            Preliminary testing of the strategy in its native form has yielded promising results. 
-            Despite the most challenging market phases, the equity line has maintained a consistently upward trajectory, 
-            confirming the resilience of the underlying algorithmic model. This virtuous behavior provides solid scientific validation, 
-            encouraging us to proceed with enthusiasm towards the next phases of development. 
-            The strategy demonstrates this intrinsic value even before the implementation of proprietary filters and advanced risk management protocols, 
-            elements that will further increase its stability and efficiency.
+            <p>
+                Preliminary testing of the strategy in its native form has yielded <strong>promising results</strong>.
+            </p>
+            <p>
+                Despite the most challenging market phases, the <strong>equity line has maintained a consistently upward trajectory</strong>, confirming the resilience of the underlying algorithmic model.
+            </p>
+            <p>
+                This virtuous behavior provides solid scientific validation, encouraging us to proceed with enthusiasm towards the next phases of development.
+            </p>
+            <p>
+                The strategy demonstrates this intrinsic value <strong>even before the implementation of proprietary filters and advanced risk management protocols</strong>, elements that will further increase its stability and efficiency.
+            </p>
         </div>
     </div>
 
@@ -120,28 +134,37 @@
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM-eurusd3.png" alt="equity line eurusd">
         <div class="desc">
-            
-            The implementation of risk management protocols—specifically through the configuration of a 30-pip Stop Loss and a 300-pip Take Profit, 
-            parameters closely aligned with a weekly multi-day horizon—has yielded a measurable improvement in both Net Profit and Drawdown mitigation. 
-            Concurrently, the geometric profile of the equity line demonstrates a qualitatively superior trajectory, 
-            characterized by steady growth alongside strictly contained adverse excursions. However, empirical data reveals that in recent annual cycles, 
-            the market structure has shifted toward a pronounced lateral consolidation regime, as illustrated in the first accompanying chart. 
-            While this regime shift has generated a temporary contraction in the performance of the core trend-following model, 
-            it fundamentally expands the methodological framework, creating substantial scope for the synergistic integration of mean-reverting strategies.
+            <p>
+                The implementation of risk management protocols—specifically through the configuration of a <strong>30-pip Stop Loss and a 300-pip Take Profit</strong>, parameters closely aligned with a weekly multi-day horizon—has yielded a measurable improvement in both <strong>Net Profit and Drawdown mitigation</strong>.
+            </p>
+            <p>
+                Concurrently, the geometric profile of the equity line demonstrates a qualitatively superior trajectory, characterized by steady growth alongside strictly contained adverse excursions.
+            </p>
+            <p>
+                However, empirical data reveals that in recent annual cycles, the market structure has shifted toward a <strong>pronounced lateral consolidation regime</strong>, as illustrated in the first accompanying chart.
+            </p>
+            <p>
+                While this regime shift has generated a temporary contraction in the performance of the core trend-following model, it fundamentally expands the methodological framework, creating substantial scope for the <strong>synergistic integration of mean-reverting strategies</strong>.
+            </p>
         </div>
     </div>
 
     <!-- Blocco 4 -->
     <div class="card">
-       <img src="/backtest-lab/page/EURUSD/IM-eurusd4.png" alt="equity line eurusd">
+        <img src="/backtest-lab/page/EURUSD/IM-eurusd4.png" alt="equity line eurusd">
         <div class="desc">
-            
-            Following an extensive analytical and backtesting phase, the asset demonstrates tangible return opportunities, exhibiting marked efficiency particularly
-            on the sell-short side. Nonetheless, the chosen operational framework displays structural friction, characterized—especially within recent market cycles—by
-            pronounced drawdown periods that compromise overall stability. Despite the implementation of a proprietary volatility filter, the optimization process was 
-            systematically halted to mitigate overfitting risk and preserve model generalizability. Consequently, a strategic decision was made to transition toward a
-            more dynamic execution protocol, designed to selectively deploy capital exclusively during phases of strong directional momentum, intentionally accepting a
-            controlled trade-off in net profit to optimize the risk-reward profile.
+            <p>
+                Following an extensive analytical and backtesting phase, the asset demonstrates tangible return opportunities, exhibiting marked efficiency particularly on the <strong>sell-short side</strong>.
+            </p>
+            <p>
+                Nonetheless, the chosen operational framework displays structural friction, characterized—especially within recent market cycles—by <strong>pronounced drawdown periods</strong> that compromise overall stability.
+            </p>
+            <p>
+                Despite the implementation of a proprietary volatility filter, the optimization process was systematically halted to <strong>mitigate overfitting risk</strong> and preserve model generalizability.
+            </p>
+            <p>
+                Consequently, a strategic decision was made to transition toward a <strong>more dynamic execution protocol</strong>, designed to selectively deploy capital exclusively during phases of strong directional momentum, intentionally accepting a controlled trade-off in net profit to optimize the risk-reward profile.
+            </p>
         </div>
     </div>
 
@@ -150,11 +173,17 @@
     <hr>
 
     <h2>Final Evaluation</h2>
-    <p><em>Having concluded the initial modeling phase, the validation protocol dictates a period of Out-of-Sample (OOS) monitoring to rigorously assess model robustness
-           and responsiveness across unobserved market regimes. Upon completion of this evaluation window, the strategy may be reclassified from a stand-alone system to a complementary, 
-           non-correlated component within the broader portfolio architecture. Concurrently, the research roadmap advances toward the empirical testing of alternative operational logics;
-           the primary objective is to conduct a comparative analysis of performance outputs, serving as a prerequisite for establishing a diversified multi-strategy ecosystem on the same 
-           underlying asset.</em></p>
+        <div class="desc">
+            <p><em>
+                Having concluded the initial modeling phase, the validation protocol dictates a period of <strong>Out-of-Sample (OOS) monitoring</strong> to rigorously assess model robustness and responsiveness across unobserved market regimes.
+            </em></p>
+            <p><em>
+                Upon completion of this evaluation window, the strategy may be reclassified from a stand-alone system to a <strong>complementary, non-correlated component</strong> within the broader portfolio architecture.
+            </em></p>
+            <p><em>
+                Concurrently, the research roadmap advances toward the empirical testing of alternative operational logics; the primary objective is to conduct a comparative analysis of performance outputs, serving as a prerequisite for establishing a <strong>diversified multi-strategy ecosystem</strong> on the same underlying asset.
+            </em></p>
+        </div>
 
     <div class="footer">
         Repository: <a href="https://github.com/Gioele-Pgni/backtest-lab">Gioele-Pgni/backtest-lab</a>
