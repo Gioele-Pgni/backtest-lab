@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backtest Lab - Dettaglio Strategie</title>
+    <title>Backtest Lab - Strategy Analysis</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -75,10 +75,22 @@
 </head>
 <body>
 
-    <h1> Nome strategia</h1>
-    <p>Breve descrizione iniziale strategia,Tipologia,Approccio,TimeFrame,Peculiarità</p>
+    <h1>EURUSD Bollinger Bands Reversal</h1>
+    <p>Operational Logic & Signal Confirmation
+       The model implements a statistical mean-reversion architecture engineered on a 30-minute operational time horizon.
+       Designed to capture short-term price adjustments following extreme market expansions, the system utilizes customized 
+       Bollinger Bands not merely as dynamic threshold indicators, but as a multi-stage execution filter.
+       Capital commitment requires explicit structural confirmation: the asset must first extend beyond the outer band boundaries
+       to establish a state of statistical overextension, followed by a confirmed candle close back inside the volatility bands. 
+       This sequential logic ensures that entry occurs only when counter-trend momentum has effectively initiated, filtering out
+       false breakouts during strong directional regimes.
+       Execution Framework & Risk Parameters
+       Position management relies on a continuous operational protocol featuring active reverse-on-signal mechanics during market hours, 
+       enabling the model to adapt dynamically to shifting intraday liquidity.To mitigate systemic tail risk and overnight weekend exposure, 
+       the strategy incorporates a mandatory temporal constraint: all active positions are systematically liquidated—or reversed depending 
+       on state parameters—at the Friday session close. This hard-coded exit rule ensures total insulation from weekend gap risk, prioritizing 
+       capital preservation across weekly cycles.</p>
 
-    
 
     <!-- Blocco 1 -->
     <div class="card">
