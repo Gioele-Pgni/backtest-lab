@@ -124,7 +124,7 @@
         <div class="desc">
             <p>
                 <strong>Optimization Outcomes & Risk Architecture</strong><br>
-                The light calibration phase yielded robust performance metrics across the multi-year dataset while validating the foundational logic. To accommodate the structural volatility required by a mean-reverting architecture on a 30-minute sampling resolution, the risk control framework employs a <strong>wider protective stop set at 140 pips</strong>.
+                The light calibration phase yielded robust performance metrics across the multi-year dataset while validating the foundational logic. To accommodate the structural volatility required by a mean-reverting architecture on a 30-minute sampling resolution, the risk control framework employs a <strong>wider protective stop set at 80 pips</strong>.
             </p>
             <p>
                 This calibrated distance grants the underlying asset necessary market movement, specifically mitigating exposure to short-term liquidity sweeps and <strong>predatory stop-hunting dynamics</strong> typical of mean-reversion entries. Profit capture remains governed by signal-based exit dynamics and the mandatory end-of-week liquidation, intentionally omitting explicit fixed take-profit targets to allow full market capture during strong mean-reverting expansions.
@@ -150,7 +150,7 @@
             <p>
                 • <strong>Regime Adaptation:</strong> The model’s drawdowns are non-structural—they reflect temporary misalignment with market conditions rather than fundamental system failure.<br>
                 • <strong>Capital Velocity:</strong> The rapid execution of winning trades during active regimes provides the necessary capital velocity to compress the temporal duration of equity drawdowns.<br>
-                • <strong>Asymmetric Recovery Rate:</strong> The high win-rate concentration during favorable windows offsets the historical friction of the 140-pip protective stop, validating the trade location logic.
+                • <strong>Asymmetric Recovery Rate:</strong> The high win-rate concentration during favorable windows offsets the historical friction of the 80-pip protective stop, validating the trade location logic.
             </p>
         </div>
     </div>
