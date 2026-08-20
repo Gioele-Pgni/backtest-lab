@@ -73,26 +73,20 @@
     </style>
 </head>
 <body>
-    <h1>EURUSD Bias</h1>
+    <h1>EURUSD Weekly Bias Strategy</h1>
 
-    <div class="card">
-        <div class="desc">
-            <p>
-                <strong>Operational Logic & Signal Confirmation</strong><br>
-                The model implements a statistical mean-reversion architecture engineered on a <strong>30-minute operational time horizon</strong>. Designed to capture short-term price adjustments following extreme market expansions, the system utilizes customized Bollinger Bands not merely as dynamic threshold indicators, but as a multi-stage execution filter.
-            </p>
-            <p>
-                Capital commitment requires explicit structural confirmation: the asset must first extend beyond the outer band boundaries to establish a state of statistical overextension, followed by a <strong>confirmed candle close back inside the volatility bands</strong>. This sequential logic ensures that entry occurs only when counter-trend momentum has effectively initiated, filtering out false breakouts during strong directional regimes.
-            </p>
-            <p>
-                <strong>Execution Framework & Risk Parameters</strong><br>
-                Position management relies on a continuous operational protocol featuring <strong>active reverse-on-signal mechanics</strong> during market hours, enabling the model to adapt dynamically to shifting intraday liquidity.
-            </p>
-            <p>
-                To mitigate systemic tail risk and overnight weekend exposure, the strategy incorporates a mandatory temporal constraint: all active positions are systematically liquidated—or reversed depending on state parameters—at the <strong>Friday session close</strong>. This hard-coded exit rule ensures total insulation from weekend gap risk, prioritizing capital preservation across weekly cycles.
-            </p>
-        </div>
+<div class="card">
+    <div class="desc">
+        <p>
+            <strong>Operational Logic & Weekly Bias Capture</strong><br>
+            The strategy implements a seasonal time-based model engineered to capture structural micro-trends across the weekly session cycle. Operating on a <strong>60-minute timeframe</strong>, the core algorithm exploits directional asymmetries by applying distinct holding constraints: <strong>Long positions are held across a 2-session operational window</strong>, whereas <strong>Short positions are restricted to a single-session horizon</strong> to align with underlying currency flows.
+        </p>
+        <p>
+            <strong>Structural Challenges & Instrument Dynamics</strong><br>
+            Capturing weekly directional bias on EURUSD presents significant operational friction. A complex combination of evolving market conditions, structural shifts, and macroeconomic factors has made an algorithmic approach particularly challenging on this asset. This structural complexity requires strict temporal execution rules to ensure capital is committed only during high-probability bias windows.
+        </p>
     </div>
+</div>
     
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM-eurusd_BIAS_1_.png" alt="equity line eurusd">
