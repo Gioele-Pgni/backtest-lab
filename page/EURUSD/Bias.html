@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtest Lab - Strategy Analysis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f6f8fa;
+            color: #24292f;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid #d0d7de;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin: 30px 0 15px 0;
+            color: #0969da;
+        }
+        p { margin-bottom: 15px; }
 
+        /* Blocco card – stesso stile dei report */
+        .card {
+            background: white;
+            padding: 18px 22px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s ease;
+        }
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Immagine dentro la card */
+        .card img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border: 1px solid #d0d7de;
+        }
+
+        /* Descrizione sotto l'immagine */
+        .card .desc {
+            color: #57606a;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #d0d7de;
+            margin: 30px 0;
+        }
+        .footer {
+            color: #57606a;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EURUSD Bollinger Bands Reversal</h1>
+
+    <div class="card">
+        <div class="desc">
+            <p>
+                <strong>Operational Logic & Signal Confirmation</strong><br>
+                The model implements a statistical mean-reversion architecture engineered on a <strong>30-minute operational time horizon</strong>. Designed to capture short-term price adjustments following extreme market expansions, the system utilizes customized Bollinger Bands not merely as dynamic threshold indicators, but as a multi-stage execution filter.
+            </p>
+            <p>
+                Capital commitment requires explicit structural confirmation: the asset must first extend beyond the outer band boundaries to establish a state of statistical overextension, followed by a <strong>confirmed candle close back inside the volatility bands</strong>. This sequential logic ensures that entry occurs only when counter-trend momentum has effectively initiated, filtering out false breakouts during strong directional regimes.
+            </p>
+            <p>
+                <strong>Execution Framework & Risk Parameters</strong><br>
+                Position management relies on a continuous operational protocol featuring <strong>active reverse-on-signal mechanics</strong> during market hours, enabling the model to adapt dynamically to shifting intraday liquidity.
+            </p>
+            <p>
+                To mitigate systemic tail risk and overnight weekend exposure, the strategy incorporates a mandatory temporal constraint: all active positions are systematically liquidated—or reversed depending on state parameters—at the <strong>Friday session close</strong>. This hard-coded exit rule ensures total insulation from weekend gap risk, prioritizing capital preservation across weekly cycles.
+            </p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_1.png" alt="equity line eurusd">
+        <div class="card">
+    <div class="desc">
+        <p>
+            <strong>Preliminary Performance & Model Validation</strong><br>
+            Initial empirical testing of the unoptimized model confirms the underlying validity of the core mean-reverting thesis. The benchmark equity curve demonstrates a resilient long-term upward trajectory—generating a <strong>theoretical cumulative gain exceeding $80,000 since 2010</strong>—driven by consistent performance run-ups across distinct market regimes.
+        </p>
+        <p>
+            While the raw signal architecture exhibits periodic drawdown friction during extended directional trends, the baseline statistical edge remains well-defined.
+        </p>
+        <p>
+            <strong>Optimization & Risk Management Roadmap</strong><br>
+            To refine structural stability and smooth capital drawdowns, the research protocol advances to a structured multi-stage optimization framework:
+        </p>
+        <p>
+            • <strong>Light Parameter Refinement:</strong> Conducting targeted parameter sensitivity analysis on the 30-minute sampling resolution to eliminate structural inefficiencies without inducing overfitting risks.<br>
+            • <strong>Dynamic Risk Control Integration:</strong> Implementing specialized position-sizing algorithms and stop-loss/take-profit boundaries designed to compress maximum drawdown metrics.<br>
+            • <strong>Multi-Step Evaluation Protocol:</strong> Systematically auditing trade-offs between net profitability and risk-adjusted metrics (Sharpe/Sortino) at each calibration stage prior to final Out-of-Sample (OOS) validation.
+        </p>
+    </div>
+
+ 
+    <!-- Blocco 2 -->
+    <div class="card">
+        <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_2.png" alt="equity line eurusd">
+        <div class="desc">
+            <p>
+                <strong>Optimization Outcomes & Risk Architecture</strong><br>
+                The light calibration phase yielded robust performance metrics across the multi-year dataset while validating the foundational logic. To accommodate the structural volatility required by a mean-reverting architecture on a 30-minute sampling resolution, the risk control framework employs a <strong>wider protective stop set at 80 pips</strong>.
+            </p>
+            <p>
+                This calibrated distance grants the underlying asset necessary market movement, specifically mitigating exposure to short-term liquidity sweeps and <strong>predatory stop-hunting dynamics</strong> typical of mean-reversion entries. Profit capture remains governed by signal-based exit dynamics and the mandatory end-of-week liquidation, intentionally omitting explicit fixed take-profit targets to allow full market capture during strong mean-reverting expansions.
+            </p>
+            <p>
+                <strong>Drawdown Profile & Model Resilience</strong><br>
+                Although the strategy exhibits localized drawdown expansion during adverse regime shifts, its recovery profile displays exceptional structural resilience. The equity curve consistently exhibits <strong>rapid, "V-shaped" momentum recoveries</strong> following peak-to-trough impairments, confirming that the model dynamically realigns with market mechanics rather than suffering structural decay.
+            </p>
+        </div>
+    </div>
+    <!-- Blocco 3 -->
+   <div class="card">
+        <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_3.png" alt="equity line eurusd">
+        <div class="desc">
+            <p>
+                <strong>Consecutive Win Sequences & Edge Persistence</strong><br>
+                Empirical evaluation of performance clustering reveals that profits materialize in distinct, high-conviction sequences. While localized drawdown phases occur during unfavorable volatility regimes, the onset of a favorable statistical window triggers immediate, sustained profitability. This operational behavior confirms that when the market realigns with the core thesis, the strategy's edge operates with <strong>high density and consistency</strong>, systematically reclaiming prior peak-to-trough losses.
+            </p>
+            <p>
+                <strong>Statistical Recovery vs. Structural Decay</strong><br>
+                This pattern of consecutive win clusters highlights a crucial distinction in the strategy’s risk-return profile:
+            </p>
+            <p>
+                • <strong>Regime Adaptation:</strong> The model’s drawdowns are non-structural—they reflect temporary misalignment with market conditions rather than fundamental system failure.<br>
+                • <strong>Capital Velocity:</strong> The rapid execution of winning trades during active regimes provides the necessary capital velocity to compress the temporal duration of equity drawdowns.<br>
+                • <strong>Asymmetric Recovery Rate:</strong> The high win-rate concentration during favorable windows offsets the historical friction of the 80-pip protective stop, validating the trade location logic.
+            </p>
+        </div>
+    </div>
+    <!-- Blocco 4 -->
+    <div class="card">
+        <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_4.png" alt="equity line eurusd">
+        <div class="desc">
+        </div>
+    </div>
+    <!-- Blocco 5 -->
+   <div class="card">
+        <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_6.png" alt="equity line eurusd">
+        <div class="desc">
+            <p>
+                <strong>Portfolio Allocation & Risk-Adjusted Sizing Impact</strong><br>
+                This practical demonstration highlights the strategic value of dynamic portfolio management protocols. By accepting a minor trade-off in raw net profitability, the framework achieves a substantial compression in maximum drawdown—significantly improving the strategy's operational sustainability and psychological tolerance.
+            </p>
+        </div>
+    </div>
+    <hr>
+            <h2>Final Evaluation</h2>
+            <p>
+                <strong>Capital Compounding & Position Sizing Dynamics</strong><br>
+                To demonstrate the architecture's compounding potential, a conservative percentage-of-equity position sizing model was applied to the baseline system. This non-linear scaling framework produced significant capital expansion over the backtest horizon:
+            </p>
+            <p>
+                • <strong>Cumulative Net Profit:</strong> $857,000<br>
+                • <strong>Maximum Peak-to-Trough Drawdown:</strong> $250,000
+            </p>
+            <p>
+                While absolute dollar drawdown expands alongside portfolio growth, the statistical edge efficiently absorbs leverage without causing structural account decay.
+            </p>
+            <p>
+                <strong>Roadmap: Out-of-Sample Validation & Deployment</strong><br>
+                With baseline development and risk architecture finalized, the strategy enters its final deployment pipeline:
+            </p>
+            <p>
+                1. <strong>Out-of-Sample (OOS) Testing:</strong> Auditing performance metrics on unseen market data to confirm edge persistence.<br>
+                2. <strong>Forward Incubation:</strong> A mandatory real-time monitoring phase to evaluate execution slippage and signal fidelity under live conditions.<br>
+                3. <strong>Portfolio Integration:</strong> Formal admission into the live repository as an uncorrelated mean-reversion driver upon satisfying all risk-adjusted performance hurdles.
+            </p>
+        </div>
+    </div>
+    
+
+    <h2>Disclaimer Investment</h2>
+    <div class="disclaimer">
+        <p>
+            <strong>Educational and Research Purpose Only:</strong> The contents, quantitative models, backtest results, and analytical material published on this repository are provided solely for educational, scientific, and research purposes.
+        </p>
+        <p>
+            <strong>No Investment Advice:</strong> Nothing contained herein constitutes financial, investment, legal, or tax advice, nor a solicitation or recommendation to buy or sell any financial instrument. Historical performance and backtested results are non-predictive and do not guarantee future returns.
+        </p>
+        <p>
+            <strong>Risk Disclosure:</strong> Foreign exchange (Forex) and algorithmic trading involve substantial risk of capital loss and are not suitable for all investors. The author assumes no responsibility or liability for any operational decisions, financial losses, or damages resulting from the use or implementation of this material.
+        </p>
+    </div>
+
+    <div class="footer">
+        Repository: <a href="https://github.com/Gioele-Pgni/backtest-lab">Gioele-Pgni/backtest-lab</a>
+    </div>
+
+</body>
+</html>
