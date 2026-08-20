@@ -27,6 +27,27 @@
             color: #0969da;
         }
         p { margin-bottom: 15px; }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+        }
+        .btn-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background-color: #0969da;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .btn-link:hover {
+            background-color: #0451a5;
+            text-decoration: none !important;
+        }
         ul {
             list-style: none;
             padding: 0;
@@ -59,35 +80,42 @@
 </head>
 <body>
     <h1>EasyLanguage Strategies</h1>
-    <div class="card">
-    <div class="desc">
-        <p>
-            A quantitative repository of algorithmic trading strategies engineered in <strong>EasyLanguage</strong> for seamless execution on TradeStation and MultiCharts.
-        </p>
-        <p>
-            The framework features institutional-grade implementations and analytical reviews spanning <strong>trend-following, mean-reversion, volatility breakout, and statistical modeling architectures</strong>—providing a robust statistical foundation for backtesting, parameter optimization, and multi-strategy portfolio construction.
-        </p>
-     </div>
-</div>
-    <h2>Example Etrategies</h2>
-    <ul>
-        <div class="report"> 
-        <a href="page/EURUSD/Bias.html">EURUSD Bias </a>
-        
-        </div>
-    </ul>
     
-    <ul>
-        <div class="report"> 
-        <a href="page/EURUSD/Bollinger_Bands_Reversal.html">EURUSD Bollinger Bands Reversal</a>
-        
+    <!-- REPOSITORY ABSTRACT -->
+    <div class="card">
+        <div class="desc">
+            <p>
+                A quantitative repository of algorithmic trading strategies engineered in <strong>EasyLanguage</strong> for seamless execution on TradeStation and MultiCharts.
+            </p>
+            <p>
+                The framework features institutional-grade implementations and analytical reviews spanning <strong>trend-following, mean-reversion, volatility breakout, and statistical modeling architectures</strong>—providing a robust statistical foundation for backtesting, parameter optimization, and multi-strategy portfolio construction.
+            </p>
         </div>
-    </ul>
-    <ul>
-        <div class="report"> 
-        <a href="page/EURUSD/Trend_Following.html">EURUSD Trend Following</a>
-        
+    </div>
+
+    <!-- SEZIONE NUOVA: MONTHLY PERFORMANCE LEADERS -->
+    <div class="card">
+        <div class="desc">
+            <h2 style="margin-top: 0;">Monthly Performance Leaders</h2>
+            <p>
+                Explore our regularly updated showcase featuring the top-performing algorithmic strategies of the current month. Filtered by risk-adjusted return parameters, drawdown resilience, and statistical stability across active portfolio models.
+            </p>
+            <a href="page/Top_Performers.html" class="btn-link">View Top Performing Strategies &rarr;</a>
         </div>
+    </div>
+
+    <!-- LISTA STRATEGIE -->
+    <h2>Example Strategies</h2>
+    <ul>
+        <li>
+            <a href="page/EURUSD/Bias.html">EURUSD Bias</a>
+        </li>
+        <li>
+            <a href="page/EURUSD/Bollinger_Bands_Reversal.html">EURUSD Bollinger Bands Reversal</a>
+        </li>
+        <li>
+            <a href="page/EURUSD/Trend_Following.html">EURUSD Trend Following</a>
+        </li>
     </ul>
     
     <hr>
