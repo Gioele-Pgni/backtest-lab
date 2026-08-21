@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,6 +64,19 @@
             border-top: 2px solid #d0d7de;
             margin: 30px 0;
         }
+
+        .disclaimer {
+            background: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            font-size: 0.85rem;
+            color: #57606a;
+        }
+        .disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
         .footer {
             color: #57606a;
             font-size: 0.9rem;
@@ -97,27 +109,26 @@
     
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_1.png" alt="equity line eurusd">
-        <div class="card">
-    <div class="desc">
-        <p>
-            <strong>Preliminary Performance & Model Validation</strong><br>
-            Initial empirical testing of the unoptimized model confirms the underlying validity of the core mean-reverting thesis. The benchmark equity curve demonstrates a resilient long-term upward trajectory—generating a <strong>theoretical cumulative gain exceeding $80,000 since 2010</strong>—driven by consistent performance run-ups across distinct market regimes.
-        </p>
-        <p>
-            While the raw signal architecture exhibits periodic drawdown friction during extended directional trends, the baseline statistical edge remains well-defined.
-        </p>
-        <p>
-            <strong>Optimization & Risk Management Roadmap</strong><br>
-            To refine structural stability and smooth capital drawdowns, the research protocol advances to a structured multi-stage optimization framework:
-        </p>
-        <p>
-            • <strong>Light Parameter Refinement:</strong> Conducting targeted parameter sensitivity analysis on the 30-minute sampling resolution to eliminate structural inefficiencies without inducing overfitting risks.<br>
-            • <strong>Dynamic Risk Control Integration:</strong> Implementing specialized position-sizing algorithms and stop-loss/take-profit boundaries designed to compress maximum drawdown metrics.<br>
-            • <strong>Multi-Step Evaluation Protocol:</strong> Systematically auditing trade-offs between net profitability and risk-adjusted metrics (Sharpe/Sortino) at each calibration stage prior to final Out-of-Sample (OOS) validation.
-        </p>
+        <div class="desc">
+            <p>
+                <strong>Preliminary Performance & Model Validation</strong><br>
+                Initial empirical testing of the unoptimized model confirms the underlying validity of the core mean-reverting thesis. The benchmark equity curve demonstrates a resilient long-term upward trajectory—generating a <strong>theoretical cumulative gain exceeding $80,000 since 2010</strong>—driven by consistent performance run-ups across distinct market regimes.
+            </p>
+            <p>
+                While the raw signal architecture exhibits periodic drawdown friction during extended directional trends, the baseline statistical edge remains well-defined.
+            </p>
+            <p>
+                <strong>Optimization & Risk Management Roadmap</strong><br>
+                To refine structural stability and smooth capital drawdowns, the research protocol advances to a structured multi-stage optimization framework:
+            </p>
+            <p>
+                • <strong>Light Parameter Refinement:</strong> Conducting targeted parameter sensitivity analysis on the 30-minute sampling resolution to eliminate structural inefficiencies without inducing overfitting risks.<br>
+                • <strong>Dynamic Risk Control Integration:</strong> Implementing specialized position-sizing algorithms and stop-loss/take-profit boundaries designed to compress maximum drawdown metrics.<br>
+                • <strong>Multi-Step Evaluation Protocol:</strong> Systematically auditing trade-offs between net profitability and risk-adjusted metrics (Sharpe/Sortino) at each calibration stage prior to final Out-of-Sample (OOS) validation.
+            </p>
+        </div>
     </div>
 
- 
     <!-- Blocco 2 -->
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_2.png" alt="equity line eurusd">
@@ -135,8 +146,9 @@
             </p>
         </div>
     </div>
+
     <!-- Blocco 3 -->
-   <div class="card">
+    <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_3.png" alt="equity line eurusd">
         <div class="desc">
             <p>
@@ -154,14 +166,15 @@
             </p>
         </div>
     </div>
+
     <!-- Blocco 4 -->
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_4.png" alt="equity line eurusd">
-        <div class="desc">
-        </div>
+        <div class="desc"></div>
     </div>
+
     <!-- Blocco 5 -->
-   <div class="card">
+    <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM_eurusd_BB_6.png" alt="equity line eurusd">
         <div class="desc">
             <p>
@@ -170,8 +183,12 @@
             </p>
         </div>
     </div>
+
     <hr>
-            <h2>Final Evaluation</h2>
+
+    <h2>Final Evaluation</h2>
+    <div class="card">
+        <div class="desc">
             <p>
                 <strong>Capital Compounding & Position Sizing Dynamics</strong><br>
                 To demonstrate the architecture's compounding potential, a conservative percentage-of-equity position sizing model was applied to the baseline system. This non-linear scaling framework produced significant capital expansion over the backtest horizon:
@@ -194,7 +211,6 @@
             </p>
         </div>
     </div>
-    
 
     <h2>Disclaimer Investment</h2>
     <div class="disclaimer">
@@ -215,3 +231,4 @@
 
 </body>
 </html>
+
