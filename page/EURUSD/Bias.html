@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,6 +64,19 @@
             border-top: 2px solid #d0d7de;
             margin: 30px 0;
         }
+
+        .disclaimer {
+            background: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            font-size: 0.85rem;
+            color: #57606a;
+        }
+        .disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
         .footer {
             color: #57606a;
             font-size: 0.9rem;
@@ -75,71 +88,59 @@
 <body>
     <h1>EURUSD Weekly Bias Strategy</h1>
 
-<div class="card">
-    <div class="desc">
-        <p>
-            <strong>Operational Logic & Weekly Bias Capture</strong><br>
-            The strategy implements a seasonal time-based model engineered to capture structural micro-trends across the weekly session cycle. Operating on a <strong>60-minute timeframe</strong>, the core algorithm exploits directional asymmetries by applying distinct holding constraints: <strong>Long positions are held across a 2-session operational window</strong>, whereas <strong>Short positions are restricted to a single-session horizon</strong> to align with underlying currency flows.
-        </p>
-        <p>
-            <strong>Structural Challenges & Instrument Dynamics</strong><br>
-            Capturing weekly directional bias on EURUSD presents significant operational friction. A complex combination of evolving market conditions, structural shifts, and macroeconomic factors has made an algorithmic approach particularly challenging on this asset. This structural complexity requires strict temporal execution rules to ensure capital is committed only during high-probability bias windows.
-        </p>
+    <div class="card">
+        <div class="desc">
+            <p>
+                <strong>Operational Logic & Weekly Bias Capture</strong><br>
+                The strategy implements a seasonal time-based model engineered to capture structural micro-trends across the weekly session cycle. Operating on a <strong>60-minute timeframe</strong>, the core algorithm exploits directional asymmetries by applying distinct holding constraints: <strong>Long positions are held across a 2-session operational window</strong>, whereas <strong>Short positions are restricted to a single-session horizon</strong> to align with underlying currency flows.
+            </p>
+            <p>
+                <strong>Structural Challenges & Instrument Dynamics</strong><br>
+                Capturing weekly directional bias on EURUSD presents significant operational friction. A complex combination of evolving market conditions, structural shifts, and macroeconomic factors has made an algorithmic approach particularly challenging on this asset. This structural complexity requires strict temporal execution rules to ensure capital is committed only during high-probability bias windows.
+            </p>
+        </div>
     </div>
-</div>
     
     <div class="card">
-    <img src="/backtest-lab/page/EURUSD/IM-eurusd_BIAS_1_.png" alt="EURUSD Bias Preliminary Backtest">
-    <div class="desc">
-        <p>
-            <strong>Optimization Protocols & Overfitting Mitigation</strong><br>
-            Extensive parameter tuning and structural refinement protocols were essential to develop a robust, acceptable system from this raw bias thesis. Given the inherent sensitivity of seasonal time-based models on currency pairs, the primary challenge during engineering was strictly avoiding overfitting—ensuring that parameters capture genuine statistical tendencies rather than curve-fitting past noise.
-        </p>
-        <p>
-            <strong>Portfolio Integration & Structural Uncertainty</strong><br>
-            While this strategy carries a higher degree of structural uncertainty compared to other algorithmic models, its inclusion within a broader, multi-strategy quantitative portfolio contributes meaningfully to overall operational stability, smoothing out collective equity line volatility.
-        </p>
+        <img src="/backtest-lab/page/EURUSD/IM-eurusd_BIAS_1_.png" alt="EURUSD Bias Preliminary Backtest">
+        <div class="desc">
+            <p>
+                <strong>Optimization Protocols & Overfitting Mitigation</strong><br>
+                Extensive parameter tuning and structural refinement protocols were essential to develop a robust, acceptable system from this raw bias thesis. Given the inherent sensitivity of seasonal time-based models on currency pairs, the primary challenge during engineering was strictly avoiding overfitting—ensuring that parameters capture genuine statistical tendencies rather than curve-fitting past noise.
+            </p>
+            <p>
+                <strong>Portfolio Integration & Structural Uncertainty</strong><br>
+                While this strategy carries a higher degree of structural uncertainty compared to other algorithmic models, its inclusion within a broader, multi-strategy quantitative portfolio contributes meaningfully to overall operational stability, smoothing out collective equity line volatility.
+            </p>
+        </div>
     </div>
-</div>
 
- 
     <!-- Blocco 2 -->
     <div class="card">
         <img src="/backtest-lab/page/EURUSD/IM-eurusd_BIAS_2_.png" alt="equity line eurusd">
-        <div class="desc">
-           
-        </div>
+        <div class="desc"></div>
     </div>
-    <!-- Blocco 3 -->
-   <div class="card">
-        <img src="/backtest-lab/page/EURUSD/IM-eurusd_BIAS_3_.png" alt="equity line eurusd">
 
-   </div>
-   
-            <h2>Final Evaluation</h2>
-            <p>
-                <strong>Capital Compounding & Position Sizing Dynamics</strong><br>
-                To demonstrate the architecture's compounding potential, a conservative percentage-of-equity position sizing model was applied to the baseline system. This non-linear scaling framework produced significant capital expansion over the backtest horizon:
-            </p>
-            <p>
-                • <strong>Cumulative Net Profit:</strong> $857,000<br>
-                • <strong>Maximum Peak-to-Trough Drawdown:</strong> $250,000
-            </p>
-            <p>
-                While absolute dollar drawdown expands alongside portfolio growth, the statistical edge efficiently absorbs leverage without causing structural account decay.
-            </p>
-            <p>
-                <strong>Roadmap: Out-of-Sample Validation & Deployment</strong><br>
-                With baseline development and risk architecture finalized, the strategy enters its final deployment pipeline:
-            </p>
-            <p>
-                1. <strong>Out-of-Sample (OOS) Testing:</strong> Auditing performance metrics on unseen market data to confirm edge persistence.<br>
-                2. <strong>Forward Incubation:</strong> A mandatory real-time monitoring phase to evaluate execution slippage and signal fidelity under live conditions.<br>
-                3. <strong>Portfolio Integration:</strong> Formal admission into the live repository as an uncorrelated mean-reversion driver upon satisfying all risk-adjusted performance hurdles.
-            </p>
-        </div>
+    <!-- Blocco 3 -->
+    <div class="card">
+        <img src="/backtest-lab/page/EURUSD/IM-eurusd_BIAS_3_.png" alt="equity line eurusd">
     </div>
     
+    <!-- FINAL EVALUATION -->
+    <h2>Final Evaluation: EURUSD Bias</h2>
+    <div class="card">
+        <div class="desc">
+            <p>
+                Despite the inherent complexities of the strategy and the underlying market dynamics, the model presents an acceptable performance outlook.
+            </p>
+            <p>
+                The observed performance metrics—specifically a <strong>Profit Factor of 1.45</strong> and an <strong>Average Trade of $90.00</strong>—are expected to be sufficient to ensure edge sustainability, taking into account the low volatility characteristic of the EURUSD pair and the impact of operational costs.
+            </p>
+            <p>
+                As standard practice within the quantitative development framework, the strategy will now undergo a monitoring period in an <strong>Out-Of-Sample (OOS)</strong> environment. Following this incubation phase, the algorithm will be evaluated for formal integration into a multi-strategy portfolio context or permanently decommissioned in the event of a negative response or performance degradation.
+            </p>
+        </div>
+    </div>
 
     <h2>Disclaimer Investment</h2>
     <div class="disclaimer">
