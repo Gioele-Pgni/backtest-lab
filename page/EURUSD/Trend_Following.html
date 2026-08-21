@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,6 +64,19 @@
             border-top: 2px solid #d0d7de;
             margin: 30px 0;
         }
+
+        .disclaimer {
+            background: #f1f3f5;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            font-size: 0.85rem;
+            color: #57606a;
+        }
+        .disclaimer p:last-child {
+            margin-bottom: 0;
+        }
+
         .footer {
             color: #57606a;
             font-size: 0.9rem;
@@ -75,25 +88,27 @@
 <body>
 
     <h1>EURUSD Trend Following</h1>
-    <div class="desc">
-        <p>
-            <strong>EUR/USD</strong>
-        </p>
-        <p>
-            <strong>Market Significance:</strong> This currency pair constitutes the most actively traded instrument globally, accounting for approximately 25% of the total Forex market volume.
-        </p>
-        <p>
-            <strong>Liquidity Dynamics:</strong> Peak liquidity and volatility concentrations are systematically observed during the London–New York session overlap (13:00–17:00 GMT).
-        </p>
-        <p>
-            <strong>Volatility Metrics:</strong> Under standard market conditions, the Average Daily Range (ADR) historically fluctuates within a baseline bandwidth of 70 to 90 pips.
-        </p>
-        <p>
-            <strong>Macroeconomic Catalysts:</strong> The primary volatility drivers and systemic risk events encompass the Non-Farm Payrolls (NFP) releases, FOMC interest rate decisions, and ECB monetary policy announcements.
-        </p>
-    </div>
 
-    
+    <!-- Overview Card -->
+    <div class="card">
+        <div class="desc">
+            <p>
+                <strong>EUR/USD</strong>
+            </p>
+            <p>
+                <strong>Market Significance:</strong> This currency pair constitutes the most actively traded instrument globally, accounting for approximately 25% of the total Forex market volume.
+            </p>
+            <p>
+                <strong>Liquidity Dynamics:</strong> Peak liquidity and volatility concentrations are systematically observed during the London–New York session overlap (13:00–17:00 GMT).
+            </p>
+            <p>
+                <strong>Volatility Metrics:</strong> Under standard market conditions, the Average Daily Range (ADR) historically fluctuates within a baseline bandwidth of 70 to 90 pips.
+            </p>
+            <p>
+                <strong>Macroeconomic Catalysts:</strong> The primary volatility drivers and systemic risk events encompass the Non-Farm Payrolls (NFP) releases, FOMC interest rate decisions, and ECB monetary policy announcements.
+            </p>
+        </div>
+    </div>
 
     <!-- Blocco 1 -->
     <div class="card">
@@ -168,11 +183,10 @@
         </div>
     </div>
 
-    
-
     <hr>
 
     <h2>Final Evaluation</h2>
+    <div class="card">
         <div class="desc">
             <p><em>
                 Having concluded the initial modeling phase, the validation protocol dictates a period of <strong>Out-of-Sample (OOS) monitoring</strong> to rigorously assess model robustness and responsiveness across unobserved market regimes.
@@ -184,24 +198,23 @@
                 Concurrently, the research roadmap advances toward the empirical testing of alternative operational logics; the primary objective is to conduct a comparative analysis of performance outputs, serving as a prerequisite for establishing a <strong>diversified multi-strategy ecosystem</strong> on the same underlying asset.
             </em></p>
         </div>
+    </div>
 
-    <!-- Disclaimer Section -->
-    <hr />
+    <hr>
 
     <h2>Disclaimer Investment</h2>
-        <div class="disclaimer">
-            <p>
-                <strong>Educational and Research Purpose Only:</strong> The contents, quantitative models, backtest results, and analytical material published on this repository are provided solely for educational, scientific, and research purposes.
-            </p>
-            <p>
-                <strong>No Investment Advice:</strong> Nothing contained herein constitutes financial, investment, legal, or tax advice, nor a solicitation or recommendation to buy or sell any financial instrument. Historical performance and backtested results are non-predictive and do not guarantee future returns.
-            </p>
-            <p>
-                <strong>Risk Disclosure:</strong> Foreign exchange (Forex) and algorithmic trading involve substantial risk of capital loss and are not suitable for all investors. The author assumes no responsibility or liability for any operational decisions, financial losses, or damages resulting from the use or implementation of this material.
-            </p>
+    <div class="disclaimer">
+        <p>
+            <strong>Educational and Research Purpose Only:</strong> The contents, quantitative models, backtest results, and analytical material published on this repository are provided solely for educational, scientific, and research purposes.
+        </p>
+        <p>
+            <strong>No Investment Advice:</strong> Nothing contained herein constitutes financial, investment, legal, or tax advice, nor a solicitation or recommendation to buy or sell any financial instrument. Historical performance and backtested results are non-predictive and do not guarantee future returns.
+        </p>
+        <p>
+            <strong>Risk Disclosure:</strong> Foreign exchange (Forex) and algorithmic trading involve substantial risk of capital loss and are not suitable for all investors. The author assumes no responsibility or liability for any operational decisions, financial losses, or damages resulting from the use or implementation of this material.
+        </p>
     </div>
-    
-        
+
     <div class="footer">
         Repository: <a href="https://github.com/Gioele-Pgni">Gioele-Pgni/backtest-lab</a>
     </div>
