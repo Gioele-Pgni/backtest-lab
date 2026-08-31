@@ -11,8 +11,4 @@ This process culminates in portfolio implementation and management,
 where capital allocation rules and risk control protocols operate to balance model correlations, 
 mitigate drawdowns, and safeguard capital at an aggregate portfolio level.
 
-Contact
 
-For inquiries, further technical details, or collaboration opportunities:
-
-Email: [your-email@domain.com]
